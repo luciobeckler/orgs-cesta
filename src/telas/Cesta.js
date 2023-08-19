@@ -3,6 +3,7 @@ import { Image, StyleSheet, Dimensions, Text, View } from 'react-native'
 
 import topo from '../../assets/topo.png'
 import logo from '../../assets/logo.png'
+import TextoPersonalizado from '../components/Text/TextoPersonalizado'
 
 
 const width = Dimensions.get('screen').width
@@ -11,18 +12,18 @@ export default function Cesta() {
     return (
         <>
             <Image source={topo} style={estilos.topo} />
-            <Text style={estilos.titulo}>Detalhes da cesta</Text>
+            <TextoPersonalizado style={estilos.titulo}>Detalhes da cesta</TextoPersonalizado >
             <View style={estilos.cesta}>
-                <Text style={estilos.nome}>Cesta de Verduras</Text>
+                <TextoPersonalizado style={estilos.nome}>Cesta de Verduras</TextoPersonalizado>
                 <View style={estilos.fazenda}>
                     <Image source={logo} style={estilos.imagemFazenda} />
                     <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
                 </View>
-                <Text style={estilos.descricao}>
+                <TextoPersonalizado style={estilos.descricao} >
                     Uma cesta com produtos selecionados cuidadosamente
                     da fazenda direto para a sua cozinha
-                </Text>
-                <Text style={estilos.preco}>R$40,00</Text>
+                </TextoPersonalizado>
+                <TextoPersonalizado style={estilos.preco}>R$40,00</TextoPersonalizado>
             </View>
         </>
     )
@@ -52,7 +53,7 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: "#464646",
-        fontFamily: 'MontserratBold'
+        fontWeight: 'bold'
     },
     fazenda: {
         flexDirection: 'row',
@@ -68,7 +69,6 @@ const estilos = StyleSheet.create({
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
-        fontFamily: 'MontserratRegular'
     },
     descricao: {
         color: '#A3A3A3',
