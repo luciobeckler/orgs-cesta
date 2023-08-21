@@ -1,9 +1,10 @@
 import React from 'react'
-import TextoPersonalizado from '../../../../components/Text'
+import TextoPersonalizado from '../Text'
+import Botao from '../Botao'
 import { Image, StyleSheet, View } from 'react-native'
 
 
-export default function Detalhes({ titulo, logoFazenda, nomeFazenda, descricao, preco }) {
+export default function Detalhes({ titulo, logoFazenda, nomeFazenda, descricao, preco, botao }) {
     return (
         <>
             <TextoPersonalizado style={estilos.nome}>{titulo}</TextoPersonalizado>
@@ -15,6 +16,7 @@ export default function Detalhes({ titulo, logoFazenda, nomeFazenda, descricao, 
                 {descricao}
             </TextoPersonalizado>
             <TextoPersonalizado style={estilos.preco}>{preco}</TextoPersonalizado>
+            <Botao texto={botao} />
         </>
     )
 }
@@ -52,5 +54,6 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
-    }
+    },
+
 })
