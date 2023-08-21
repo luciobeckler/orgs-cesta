@@ -1,22 +1,20 @@
 import React from 'react'
 import TextoPersonalizado from '../../../../components/Text'
 import { Image, StyleSheet, View } from 'react-native'
-import logo from '../../../../../assets/logo.png'
 
 
-export default function Detalhes() {
+export default function Detalhes({ titulo, logoFazenda, nomeFazenda, descricao, preco }) {
     return (
         <>
-            <TextoPersonalizado style={estilos.nome}>Cesta de Verduras</TextoPersonalizado>
+            <TextoPersonalizado style={estilos.nome}>{titulo}</TextoPersonalizado>
             <View style={estilos.fazenda}>
-                <Image source={logo} style={estilos.imagemFazenda} />
-                <TextoPersonalizado style={estilos.nomeFazenda}>Jenny Jack Farm</TextoPersonalizado>
+                <Image source={logoFazenda} style={estilos.imagemFazenda} />
+                <TextoPersonalizado style={estilos.nomeFazenda}>{nomeFazenda}</TextoPersonalizado>
             </View>
             <TextoPersonalizado style={estilos.descricao} >
-                Uma cesta com produtos selecionados cuidadosamente
-                da fazenda direto para a sua cozinha
+                {descricao}
             </TextoPersonalizado>
-            <TextoPersonalizado style={estilos.preco}>R$40,00</TextoPersonalizado>
+            <TextoPersonalizado style={estilos.preco}>{preco}</TextoPersonalizado>
         </>
     )
 }

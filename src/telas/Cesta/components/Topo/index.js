@@ -7,11 +7,11 @@ import TextoPersonalizado from '../../../../components/Text'
 
 const width = Dimensions.get('screen').width
 
-export default function Topo() {
+export default function Topo({ titulo }) {
     return (
         <>
             <Image source={topo} style={estilos.topo} />
-            <TextoPersonalizado style={estilos.titulo}>Detalhes da cesta</TextoPersonalizado >
+            <TextoPersonalizado style={estilos.titulo}>{titulo}</TextoPersonalizado >
         </>
     )
 }
