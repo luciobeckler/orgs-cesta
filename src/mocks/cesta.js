@@ -17,7 +17,7 @@ const cesta = {
         titulo: "Cesta de verduras",
         logoFazenda: logo,
         nomeFazenda: "Janny Jack Farm",
-        descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para a sua cozinha",
+        descricao: "Nossa fazenda é como um pedacinho do paraíso rural, onde cultivamos com carinho uma seleção especial de produtos incríveis.Cada item é escolhido com atenção e colhido diretamente da terra para sua cozinha.Com a gente, você leva pra casa não só alimentos deliciosos, mas também a energia da natureza e o amor pelo que fazemos.É como ter um pedacinho da fazenda direto na sua mesa!",
         preco: "R$ 40,00",
         botao: "Comprar"
     },

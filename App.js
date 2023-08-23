@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import Cesta from './src/telas/Cesta';
 import {
   useFonts,
@@ -22,11 +22,9 @@ export default function App() {
 
 
   return (
-    <SafeAreaView >
-      <ScrollView>
-        <StatusBar />
-        <Cesta {...mock} />
-      </ScrollView>
+    <SafeAreaView style={{ flex: 1 }} >
+      <StatusBar />
+      <Cesta {...mock} />
     </SafeAreaView>
   );
 }
